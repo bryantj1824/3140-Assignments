@@ -1,5 +1,4 @@
 /**
- * 
  * Problem Description: To create a simple calculator program which will
  * recieve the operation from the user, and two numbers to perform the 
  * calculations with
@@ -102,7 +101,7 @@ int main(){
 	printf("\nHere is a list of all integer values for the operations to perform.\n");
 	printf("(1 = add, 2 = subtract, 3 = multiply, 4 = divide, 5 = square_root)\n\n");
 
-	// Requests the first operation type to begin
+	// Requesting the first operation to begin with
 
 	printf("Select an Operation: ");
 
@@ -119,16 +118,29 @@ int main(){
 			
 			printf("\nEnter first number: ");	
 
-			// // Ensures user enters correct number
-			// if (cin >> a){
-			// 	/* code */
-			// }
+			cin >> a;
+
+			// If user entered wrong input, will repeatedly ask user to try again
+			// Until user provides correct number
+			if (!cin.good()){
+				printf("\n Invalid number provided. Try again.\n");	
+				cin.clear();
+	  			while (cin.get() != '\n') ; // empty loop
+				continue;
+			}
 
 			printf("\nEnter second number: ");	
 
 			cin >> b;
 
-
+			// If user entered wrong input, will repeatedly ask user to try again
+			// Until user provides correct number
+			if (!cin.good()){
+				printf("\n Invalid number provided. Try again.\n");	
+				cin.clear();
+	  			while (cin.get() != '\n') ; // empty loop
+				continue;
+			}
 
 			answer = the_calculator.do_the_math(operation, a, b);
 
@@ -139,6 +151,15 @@ int main(){
 		else if( operation == 5 ){
 
 			printf("\nEnter a number: ");	
+
+			// If user entered wrong input, will repeatedly ask user to try again
+			// Until user provides correct number
+			if (!cin.good()){
+				printf("\n Invalid number provided. Try again.\n");	
+				cin.clear();
+	  			while (cin.get() != '\n') ; // empty loop
+				continue;
+			}
 
 			cin >> a;
 
