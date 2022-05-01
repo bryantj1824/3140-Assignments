@@ -1,3 +1,12 @@
+Note to self: Students can repeat in csv file
+
+# Run Program
+1. This program uses a makefile to compile all src code in root directory under the file name "lab3"
+2. To build program, simply run the command 'make lab3' in linux terminal
+3. After building program, to run program enter the command ./lab3 into terminal from root directory
+
+** Important Note: Because this program is going to be compiled and ran from root directory all paths in the .cpp and .h files should be referenced as if they are being ran from root directory **
+
 # Lab 3 Assignment Overview
 
 To create a program that will take various CSV files with the following fields:
@@ -29,15 +38,16 @@ The main goal is to generate the pass and w rates for instructors, courses, and 
 We can do so by creating a class called GradeRate.
 
 The class GradeRate will have the following static properties:
-- Students - a map of Student objects
-- Instructors - a map of Instructor objects 
+- Students - a vector of Student objects (vectors because students can repeat)
+- Instructors - a map of Instructor objects
 - Courses - a map of Course objects
 - Terms - a map of Term Objects
 
 The class GradeRate will have the following methods:
-- getGradeRate( String category, String grade )
+- getGradeRate( String category, String categoryId, String grade )
 	- Parameters:
-		- category - will decide which of the Instructors, Courses, and Terms we want to get the grade rate for
+		- category - "Instructor", "Course", or "Term" 
+		- categoryId - the id of the "Instructor", "Course", or "Term"
 		- grade - which letter grade are we getting the rate for
 	- Function Goal:
 		- To retrieve the grade rate for a specific category
@@ -48,23 +58,6 @@ The class GradeRate will have the following methods:
 		- To add Instructor, Course, and Term to corresponding map if not already added
 		- To add the studentGrade object in the correct categories (Instructors, Courses, Terms)
 
-- addInstructor(String id)
-	- Parameters: 
-		- id - instructors id
-	- Function Goal:
-		- To create instructor object and add to Instructors map
-
-- addCourse(String id)
-	- Parameters: 
-		- id - course id
-	- Function Goal:
-		- To create course object and add to Courses map
-
-- addTerm(String id)
-	- Parameters: 
-		- id - term id
-	- Function Goal:
-		- To create term object and add to Term map
 
 ## Instructor, Course, and Term Structs
 Each Instructor, Course, and Terms Structs will also have the following properties:
@@ -100,4 +93,4 @@ The StudentGrade will also have the following methods
 
 ## ReadWrite Class
 
-This class will be responsible for reading and writing to files 
+This class will be responsible for reading and writing to and from files 
