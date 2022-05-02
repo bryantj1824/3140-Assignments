@@ -1,0 +1,13 @@
+The pass rate for term T04 is 55.18
+The pass rate for term T05 is 59.22
+The pass rate for term T07 is 62.31
+The pass rate for term T08 is 67.65
+The pass rate for term T09 is 65.07
+The pass rate for term T11 is 69.15
+The pass rate for term T12 is 67.37
+The pass rate for term T13 is 58.23
+The pass rate for term T15 is 73.68
+The pass rate for term T16 is 66.20
+The pass rate for term T17 is 62.65
+The pass rate for term T19 is 72.72
+

@@ -5,6 +5,7 @@
 #include <sstream>
 #include <vector>
 #include <fstream>
+#include <ctime>
 
 using namespace std;
 
@@ -21,6 +22,9 @@ class ReadWrite{
 		 * With the first dimension being a row and the second dimension of array being columns
 		 */
 		vector<vector<string>> parseCSV(string csv_file_path);
+
+
+		void writeToFile(string filename, string output);
 
 };
 

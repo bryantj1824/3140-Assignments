@@ -1,0 +1,4 @@
+The W rate for course 1115 is 19.58
+The W rate for course 3115 is 10.00
+The W rate for course 3130 is 7.823
+

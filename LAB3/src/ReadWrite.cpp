@@ -3,6 +3,7 @@
 #include <sstream>
 #include <vector>
 #include <fstream>
+#include <ctime>
 
 using namespace std;
 /**
@@ -44,3 +45,30 @@ vector<vector<string>> ReadWrite::parseCSV(string csv_file_path){
     return parsedCSV;
 
 };
+
+
+void ReadWrite::writeToFile(string filename, string output){
+
+    string output_file_path = "./output/";
+
+    // current date/time based on current system
+    time_t now = time(0);
+
+    // convert now to string form
+    char* dt = ctime(&now);
+
+    // Formatting File Name
+    filename += "(";
+    filename += dt;
+    filename += ")";
+    filename += ".txt";
+
+    output_file_path += filename;
+
+    ofstream file(output_file_path);
+
+    file << output << endl;
+
+    file.close();
+
+}

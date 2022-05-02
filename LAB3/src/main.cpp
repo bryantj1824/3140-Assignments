@@ -5,10 +5,14 @@
 #include <sstream>
 #include <vector>
 #include <fstream>
+#include <sstream>  
 
 using namespace std;
 
 int main(){
+
+	// A stringstream to save all output to a buffer
+	stringstream passRateBuffer, wRateBuffer;
 
 	// String variables that will be used/reused throughout program
 	string emplID, courseID, instructorID, termID, sectionID, grade, passRate, wRate;
@@ -45,7 +49,12 @@ int main(){
 
 		}
 
-	}		
+	}	
+
+
+
+
+	//read_and_write.writeToFile("test", "testing");
 
 
 	// Loops through all Courses
@@ -56,15 +65,19 @@ int main(){
 
 		passRate = GradeRate::getPassRate("Course", courseID);
 
-		cout << "The pass rate for course " << courseID << " is " << passRate << endl;
+		passRateBuffer << "The pass rate for course " << courseID << " is " << passRate << endl;
 
 		wRate = GradeRate::getGradeRate("Course", courseID, "W");
 
-		cout << "The W rate for course " << courseID << " is " << wRate << endl;
+		wRateBuffer << "The W rate for course " << courseID << " is " << wRate << endl;
 
 	}
 
-	cout << endl;
+	read_and_write.writeToFile("Pass_Rate_Per_Course", passRateBuffer.str());
+	read_and_write.writeToFile("W_Rate_Per_Course", wRateBuffer.str());
+
+	passRateBuffer.str(""); // clear buffer
+	wRateBuffer.str(""); 	// clear buffer
 
 	// Loops through all Instructors
 	// Outputs pass rate and w rate for each instructor 
@@ -74,15 +87,19 @@ int main(){
 
 		passRate = GradeRate::getPassRate("Instructor", instructorID);
 
-		cout << "The pass rate for instructor " << instructorID << " is " << passRate << endl;
+		passRateBuffer << "The pass rate for instructor " << instructorID << " is " << passRate << endl;
 
 		wRate = GradeRate::getGradeRate("Instructor", instructorID, "W");
 
-		cout << "The W rate for instructor " << instructorID << " is " << wRate << endl;
+		wRateBuffer << "The W rate for instructor " << instructorID << " is " << wRate << endl;
 
 	}
 
-	cout << endl;
+	read_and_write.writeToFile("Pass_Rate_Per_Instructor", passRateBuffer.str());
+	read_and_write.writeToFile("W_Rate_Per_Instructor", wRateBuffer.str());
+
+	passRateBuffer.str(""); // clear buffer
+	wRateBuffer.str(""); 	// clear buffer
 
 	// Loops through all Terms
 	// Outputs the spring/fall pass rate for each term
@@ -92,31 +109,39 @@ int main(){
 
 		passRate = GradeRate::getPassRate("Term", termID);
 
-		cout << "The pass rate for term " << termID << " is " << passRate << endl;
+		passRateBuffer << "The pass rate for term " << termID << " is " << passRate << endl;
 
 	}
 
-	cout << endl;
+	read_and_write.writeToFile("Pass_Rate_Per_Term", passRateBuffer.str());
+
+	passRateBuffer.str(""); // clear buffer
 
 	// Outputs the spring pass rate for each course
 
-	cout << "The pass rate for course 1115 spring term is: " << GradeRate::getSpringPassRateForCourse("1115") << endl;
+	passRateBuffer << "The pass rate for course 1115 spring term is: " << GradeRate::getSpringPassRateForCourse("1115") << endl;
 
-	cout << "The pass rate for course 3115 spring term is: " << GradeRate::getSpringPassRateForCourse("3115") << endl;
+	passRateBuffer << "The pass rate for course 3115 spring term is: " << GradeRate::getSpringPassRateForCourse("3115") << endl;
 
-	cout << "The pass rate for course 3115 spring term is: " << GradeRate::getSpringPassRateForCourse("3130") << endl;
+	passRateBuffer << "The pass rate for course 3115 spring term is: " << GradeRate::getSpringPassRateForCourse("3130") << endl;
 
 
-	cout << endl;
+	read_and_write.writeToFile("Spring_Courses_Pass_Rate", passRateBuffer.str());
+
+	passRateBuffer.str(""); // clear buffer
+
 
 	// Outputs the fall pass rate for each course
 
-	cout << "The pass rate for course 1115 fall term is: " << GradeRate::getFallPassRateForCourse("1115") << endl;
+	passRateBuffer << "The pass rate for course 1115 fall term is: " << GradeRate::getFallPassRateForCourse("1115") << endl;
 
-	cout << "The pass rate for course 3115 fall term is: " << GradeRate::getFallPassRateForCourse("3115") << endl;
+	passRateBuffer << "The pass rate for course 3115 fall term is: " << GradeRate::getFallPassRateForCourse("3115") << endl;
 
-	cout << "The pass rate for course 3115 fall term is: " << GradeRate::getFallPassRateForCourse("3130") << endl;
+	passRateBuffer << "The pass rate for course 3115 fall term is: " << GradeRate::getFallPassRateForCourse("3130") << endl;
 
+	read_and_write.writeToFile("Fall_Courses_Pass_Rate", passRateBuffer.str());
+
+	passRateBuffer.str(""); // clear buffer
 
 	return 0;
 };

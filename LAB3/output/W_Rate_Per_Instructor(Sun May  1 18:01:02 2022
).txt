@@ -1,0 +1,26 @@
+The W rate for instructor I01 is 21.13
+The W rate for instructor I02 is 14.00
+The W rate for instructor I03 is 2.500
+The W rate for instructor I04 is 13.63
+The W rate for instructor I06 is 7.246
+The W rate for instructor I07 is 4.774
+The W rate for instructor I08 is 20.96
+The W rate for instructor I10 is 2.158
+The W rate for instructor I11 is 16.12
+The W rate for instructor I12 is 20.94
+The W rate for instructor I14 is 6.060
+The W rate for instructor I15 is 9.941
+The W rate for instructor I16 is 21.47
+The W rate for instructor I17 is 7.462
+The W rate for instructor I18 is 14.02
+The W rate for instructor I19 is 4.491
+The W rate for instructor I20 is 14.58
+The W rate for instructor I21 is 21.24
+The W rate for instructor I22 is 12.50
+The W rate for instructor I23 is 10.55
+The W rate for instructor I24 is 8.571
+The W rate for instructor I25 is 13.33
+The W rate for instructor I26 is 16.66
+The W rate for instructor I27 is 7.303
+The W rate for instructor I28 is 27.30
+

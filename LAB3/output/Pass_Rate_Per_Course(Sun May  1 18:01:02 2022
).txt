@@ -1,0 +1,4 @@
+The pass rate for course 1115 is 52.91
+The pass rate for course 3115 is 76.01
+The pass rate for course 3130 is 79.93
+

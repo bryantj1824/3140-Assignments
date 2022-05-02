@@ -1,11 +1,7 @@
-Note to self: Students can repeat in csv file
-
 # Run Program
 1. This program uses a makefile to compile all src code in root directory under the file name "lab3"
 2. To build program, simply run the command 'make lab3' in linux terminal
 3. After building program, to run program enter the command ./lab3 into terminal from root directory
-
-** Important Note: Because this program is going to be compiled and ran from root directory all paths in the .cpp and .h files should be referenced as if they are being ran from root directory **
 
 # Lab 3 Assignment Overview
 

@@ -1,0 +1,26 @@
+The pass rate for instructor I01 is 61.88
+The pass rate for instructor I02 is 50.00
+The pass rate for instructor I03 is 90.00
+The pass rate for instructor I04 is 38.63
+The pass rate for instructor I06 is 82.60
+The pass rate for instructor I07 is 88.85
+The pass rate for instructor I08 is 44.47
+The pass rate for instructor I10 is 87.76
+The pass rate for instructor I11 is 61.29
+The pass rate for instructor I12 is 59.12
+The pass rate for instructor I14 is 80.51
+The pass rate for instructor I15 is 72.51
+The pass rate for instructor I16 is 49.03
+The pass rate for instructor I17 is 71.64
+The pass rate for instructor I18 is 64.29
+The pass rate for instructor I19 is 83.23
+The pass rate for instructor I20 is 63.75
+The pass rate for instructor I21 is 54.67
+The pass rate for instructor I22 is 78.40
+The pass rate for instructor I23 is 78.88
+The pass rate for instructor I24 is 82.85
+The pass rate for instructor I25 is 70.00
+The pass rate for instructor I26 is 66.66
+The pass rate for instructor I27 is 83.70
+The pass rate for instructor I28 is 37.73
+
